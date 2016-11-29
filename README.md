@@ -37,6 +37,8 @@ public class IntroActivity extends AppIntro {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        // Note here that we DO NOT use setContentView();
+
         // Add your slide fragments here.
         // AppIntro will automatically generate the dots indicator and buttons.
         addSlide(firstFragment);
@@ -83,6 +85,8 @@ public class IntroActivity extends AppIntro {
 }
 ```
 
+_Note above that we DID NOT use setContentView();_
+
 Finally, declare the activity in your Manifest like so:
 
 ``` xml
@@ -124,7 +128,7 @@ protected void onCreate(@Nullable Bundle savedInstanceState) {
 ##### Custom slides example
 
 One may also define custom slides as seen in the example project:
- * Copy the class **SampleSlide** from my [example project](https://github.com/PaoloRotolo/AppIntro/blob/master/example/src/main/java/com/github/paolorotolo/appintroexample/SampleSlide.java).
+ * Copy the class **SampleSlide** from my [example project](https://github.com/PaoloRotolo/AppIntro/blob/master/example/src/main/java/com/github/paolorotolo/appintroexample/util/SampleSlide.java).
  * Add a new slide with `addSlide(SampleSlide.newInstance(R.layout.your_slide_here));`
 
 There's no need to create one class for fragment anymore. :)
@@ -262,7 +266,7 @@ Do you need inspiration? A lot of apps are using AppIntro out there:
 <img src="https://github.com/PaoloRotolo/AppIntro/blob/master/art/Screenshot_2015-06-03-12-42-10.png" width="300">
 
 ## Apps using AppIntro
-If you are using AppIntro in your app and would like to be listed here, please let us know by opening a [new issue](https://github.com/PaoloRotolo/AppIntro/issues/new)!
+If you are using AppIntro in your app and would like to be listed here, please let us know by commenting in [this issue](https://github.com/PaoloRotolo/AppIntro/issues/325)!
 
  * [Numix Hermes](https://play.google.com/store/apps/details?id=org.numixproject.hermes)
  * [Audio Reminder Pro](https://play.google.com/store/apps/details?id=com.brandon.audioreminderpro)
@@ -274,39 +278,47 @@ If you are using AppIntro in your app and would like to be listed here, please l
  * [Task Master](https://play.google.com/store/apps/details?id=com.cr5315.taskmaster)
  * [Smoothie Recipes](https://play.google.com/store/apps/details?id=com.skykonig.smoothierecipes)
  * [SideBar Notes](https://play.google.com/store/apps/details?id=com.app.floating.notes)
- * [Just food](https://play.google.com/store/apps/details?id=scientist.jobless.foodmana)
+ * [just food](https://play.google.com/store/apps/details?id=scientist.jobless.foodmana)
  * [AlarmSMS](https://play.google.com/store/apps/details?id=com.qhutch.alarmsms)
- * [Aware](https://play.google.com/store/apps/details?id=com.bunemekyakilika.aware)
+ * [Aware](https://play.google.com/store/apps/details?id=com.bunemekyakilika.aware)  <!-- App is region restricted - please confirm avail. region -->
  * [neutriNote](https://play.google.com/store/apps/details?id=com.appmindlab.nano)
- * [Handwriting Note](https://play.google.com/store/apps/details?id=com.lyk.immersivenote&hl=en)
+ * [Handwriting Note](https://play.google.com/store/apps/details?id=com.lyk.immersivenote)
  * [Friends Roulette](https://play.google.com/store/apps/details?id=com.crioltech.roulette)
  * [Karting Tools](https://play.google.com/store/apps/details?id=com.fabreax.android.kartingtools.activity)
  * [ChineseDictionary (粵韻漢典離線粵語普通話發聲中文字典)](https://play.google.com/store/apps/details?id=com.jonasng.chinesedictionary)
- * [Sifter: the Insta of Timehop](https://play.google.com/store/apps/details?id=sifter.social.network.archaeologist)
- * [Ludus](https://play.google.com/store/apps/details?id=com.fallenritemonk.ludus)
- * [Snipit](https://play.google.com/store/apps/details?id=com.om.snipit)
+ * [Sifter](https://play.google.com/store/apps/details?id=sifter.social.network.archaeologist)
+ * [#-ludus 2.0](https://play.google.com/store/apps/details?id=com.fallenritemonk.ludus)
+ * [Snipit Text Grabber](https://play.google.com/store/apps/details?id=com.om.snipit)
  * [Service Notes](https://play.google.com/store/apps/details?id=notes.service.com.servicenotes)
  * [Salary Barometer](https://play.google.com/store/apps/details?id=anaware.salarybarometer)
- * [Best Business Idea](https://play.google.com/store/apps/details?id=anaware.bestidea)
- * [Wi-Fi Password Reminder](https://play.google.com/store/apps/details?id=com.rusdelphi.wifipassword)
+ * [Best Business Idea!](https://play.google.com/store/apps/details?id=anaware.bestidea)
+ * [Wi-Fi password reminder](https://play.google.com/store/apps/details?id=com.rusdelphi.wifipassword)
  * [Safe Notes](https://play.google.com/store/apps/details?id=software.codeplus.safenotes)
- * [Xpaper](https://play.google.com/store/apps/details?id=com.dunrite.xpaper&hl=en)
+ * [Xpaper - Moto X Wallpapers](https://play.google.com/store/apps/details?id=com.dunrite.xpaper)
  * [Find My Parked Car](https://play.google.com/store/apps/details?id=com.ofirmiron.findmycarandroidwear)
  * [BoxPlay Music Player](https://play.google.com/store/apps/details?id=de.luckyworks.boxplay)
  * [Vape Tool Pro](https://play.google.com/store/apps/details?id=com.stasbar.vapetoolpro)
  * [NebelNiek Soundboard](https://play.google.com/store/apps/details?id=de.logtainment.nebelnieksoundboard)
- * [sdiwi](https://play.google.com/store/apps/details?id=com.sdiwi.app)
+ * [sdiwi | Win your purchase!](https://play.google.com/store/apps/details?id=com.sdiwi.app)
  * [Helal ve Sağlıklı Yaşam](https://play.google.com/store/apps/details?id=org.yasam.hsy.helalvesaglikliyasam)
- * [HipCar](https://play.google.com/store/apps/details?id=com.hipcar.android)
- * [Schematiskt](https://play.google.com/store/apps/details?id=se.zinokader.schematiskt)
+ * [HipCar - Car Rental](https://play.google.com/store/apps/details?id=com.hipcar.android)
+ * [Schematiskt Skolschema](https://play.google.com/store/apps/details?id=se.zinokader.schematiskt)
  * [Third Eye](https://play.google.com/store/apps/details?id=com.miragestacks.thirdeye)
- * [Crypton](https://play.google.com/store/apps/details?id=mindstorm.crypton)
- * [Web Video Caster](https://play.google.com/store/apps/details?id=com.instantbits.cast.webvideo)
+ * [Crypton - Password Manager](https://play.google.com/store/apps/details?id=mindstorm.crypton)
+ * [Web Video Cast](https://play.google.com/store/apps/details?id=com.instantbits.cast.webvideo)
  * [Sask. Geo-Memorial](https://play.google.com/store/apps/details?id=com.github.dstaflund.geomemorial)
  * [SchoolBox](https://play.google.com/store/apps/details?id=com.deenysoft.schoolbox)
  * [Fitness Challenge](https://play.google.com/store/apps/details?id=com.isidroid.fitchallenge)
- * [ICE: Emergency Button](https://play.google.com/store/apps/details?id=com.figsandolives.ice.free)
+ * [Crunch (ICE)](https://play.google.com/store/apps/details?id=com.figsandolives.ice.free)
  * [Filmy - Your Movie Guide](https://play.google.com/store/apps/details?id=tech.salroid.filmy)
  * [HEBF Optimizer ▪ Root](https://play.google.com/store/apps/details?id=com.androidvip.hebf)
  * [Wifi Captive Login](https://play.google.com/store/apps/details?id=com.anantharam.wificaptivelogin)
  * [IIFYM](https://play.google.com/store/apps/details?id=com.javierd.iifym)
+ * [Ampwifi Winamp Remote](https://play.google.com/store/apps/details?id=com.blitterhead.ampwifi)
+ * [AaiKya: Leave Tracker](https://play.google.com/store/apps/details?id=com.ranveeraggarwal.letrack)
+ * [Angopapo - People around you](https://play.google.com/store/apps/details?id=com.msingapro.angopapofb)
+ * [Hugetwit](https://play.google.com/store/apps/details?id=com.halilibo.hugetwit)
+ * [Wake Me Up (Mumbai Railway)](https://play.google.com/store/apps/details?id=com.catacomblabs.wakemeup)
+ * [SelfMote - Wireless Remote app](https://play.google.com/store/apps/details?id=com.dmicse.selfmote.free)
+ * [Boo Music Player](https://play.google.com/store/apps/details?id=cdn.BooPlayer)
+ * [BeatPrompter](https://play.google.com/store/apps/details?id=com.stevenfrew.beatprompter)
